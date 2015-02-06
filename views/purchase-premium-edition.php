@@ -32,7 +32,7 @@ else
 					</div>
 					<div class="widget-layout-body">
 						<h1 style="text-align: center; margin-bottom: 40px">
-							<?php _e("WP Backup Bank is an one time Investment. Its Worth it!", cleanup_optimizer); ?>
+							<?php _e("WP Backup Bank is an one time Investment. Its Worth it!", wp_backup_bank); ?>
 						</h1>
 						<div id="backup_bank_pricing"
 							class="p_table_responsive p_table_hide_caption_column p_table_1 p_table_1_1 css3_grid_clearfix">
@@ -476,7 +476,7 @@ else
 									<li class="css3_grid_row_32 footer_row css3_grid_row_32_responsive"><span
 										class="css3_grid_vertical_align_table"><span
 											class="css3_grid_vertical_align"><a target="_blank"
-												href=""
+												href="https://wordpress.org/plugins/wp-backup-bank/"
 												class="sign_up sign_up_orange radius3">Download!</a></span></span></li>
 								</ul>
 							</div>

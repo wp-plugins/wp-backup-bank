@@ -1,6 +1,6 @@
 === WP Backup Bank ===
 Contributors: contact-banker, Gallery-Bank
-Tags: backup, wp backup, wordpress backup
+Tags: backup, wp backup, wordpress backup, admin, db backup
 Requires at least: 3.0
 Tested up to: 4.1
 Stable tag: 1.0.0

@@ -17,7 +17,10 @@ if (!defined("wp_backup_bank")) define("wp_backup_bank", "backup-bank");
 if (!defined("tech_bank")) define("tech_bank", "tech-banker");
 if (!defined("BACKUP_BANK_FILE")) define("BACKUP_BANK_FILE","wp-backup-bank/wp-backup-bank.php");
 /////////////////////////////////////  Define WP Backup Bank Table Name Functions  ////////////////////////////////////////
-
+if (!is_dir(BACKUP_BK_CONTENT_DIR))
+{
+	wp_mkdir_p(BACKUP_BK_CONTENT_DIR . "/wp-backup-bank/");
+}
 if(!function_exists("backup_tbl_backup_details"))
 {
 	function backup_tbl_backup_details()

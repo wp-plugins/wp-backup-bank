@@ -120,7 +120,7 @@ else
 										</div>
 									</div>
 									<div class="layout-control-group">
-										<input type="submit" id="ux_btn_submit" name="ux_btn_submit" class="btn btn-danger" 
+										<input type="submit" id="ux_btn_submit" name="ux_btn_submit" class="btn btn-backup-bank" 
 										value="<?php _e("Proceed to Next Step", wp_backup_bank ); ?> >>" style="float:right;"/>
 									</div>
 								</div>

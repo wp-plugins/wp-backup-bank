@@ -126,7 +126,7 @@ else
 				{
 					var $total_no_files = 0;
 					var $backup_id = "";
-					function recurse_copy($src)
+					function count_files($src)
 					{
 						$dir = opendir($src);
 						while(false !== ( $file = readdir($dir)) )
@@ -136,7 +136,7 @@ else
 								if ( is_dir($src . "/" . $file) )
 								{
 									$this->total_no_files++;
-									$this->recurse_copy($src . "/" . $file);
+									$this->count_files($src . "/" . $file);
 								}
 								else
 								{
@@ -185,7 +185,7 @@ else
 					{
 						$this->backup_id = $backup_id;
 						$this->log_file = $log_file;
-						$this->exclude_files = ($exclude_files != "" ) ? explode(",",$exclude_files) : "" ;
+						$this->exclude_files = (($exclude_files != "")) ? explode(",",$exclude_files) : "" ;
 						$this->backup_folder = $backup_folder;
 						$this->archive_file = $file;
 						$this->ziparchive = new ZipArchive();
@@ -214,7 +214,7 @@ else
 								}
 								while ( $file = array_shift( $files_in_folder ) )
 								{
-									$name_in_archive = ltrim( str_replace( $this->path, '', $file ), '/' );
+									$name_in_archive = ltrim( str_replace( $this->path, "", $file ), "/" );
 									$this->add_File($file, $name_in_archive,$count_files);
 									$count_files++;
 								}
@@ -225,7 +225,7 @@ else
 					public function add_File($file_name, $name_in_archive = "", $count_files)
 					{
 						$file_name = trim($file_name);
-						if(empty($file_name))
+						if(empty($name_in_archive))
 						{
 							$name_in_archive = $file_name;
 						}
@@ -233,7 +233,6 @@ else
 						$file_size = abs( (int) filesize( $file_name ) );
 						if($file_size < ( 1024 * 1024 * 2))
 						{
-							//$this->filesize = $this->filesize + $file_size;
 							$this->ziparchive->addFromString( $name_in_archive, file_get_contents( $file_name ));
 							$this->count_file++;
 							if($count_files == 1)
@@ -244,7 +243,6 @@ else
 						}
 						else
 						{
-							//$this->filesize = $this->filesize + $file_size;
 							$this->ziparchive->addFile( $file_name, $name_in_archive );
 							$this->count_file++;
 						}
@@ -283,21 +281,20 @@ else
 							{
 								if (( in_array( $file, array( '.', '..' ) )) || (is_dir( $folder . $file )))
 									continue;
-								
 								if(($this->exclude_files != ""))
 								{
 									$path_info = pathinfo($folder.$file,PATHINFO_EXTENSION);
 									$file_extension = $path_info;
-									foreach ( $this->exclude_files as $exclusion )
+									for($flag = 0; $flag < count($this->exclude_files); $flag++)
 									{
-										$exclusion = trim($exclusion,".");
-										if(strcmp($file_extension,$exclusion) === 0)
+										$exclusion = str_replace(".","",$this->exclude_files[$flag]);
+										if($file_extension == $exclusion)
 										{
 											$matched = 1;
 										}
 									}
+									($matched == 0) ? $files [] = $folder . $file : $matched = 0;
 								}
-								($matched == 0) ? $files [] =  $folder . $file : $matched = 0 ;
 							}
 						}
 						closedir($dir);
@@ -328,11 +325,11 @@ else
 							
 							$file_content = __("Backup Archive created Successfully", wp_backup_bank).".\r\n";
 							create_log_file($this->log_file,$file_content);
-							
-							//$file_info = size_format($this->filesize,2);
-// 							$file_content = __("Backup Archive size is", wp_backup_bank)." ".$file_info.".\r\n";
-// 							create_log_file($this->log_file,$file_content);
+
 							$this->ziparchive->close();
+							$file_info = round(filesize($this->archive_file)/1000,2);
+							$file_content = __("Backup Archive size is", wp_backup_bank)." ".$file_info." Kb.\r\n";
+							create_log_file($this->log_file,$file_content);
 						}
 					}
 					
@@ -535,7 +532,7 @@ else
 										//////////////////////////////////////////// update total no of files in backup directory ////////////////////////////////
 										
 										$total_file_obj = new total_files();
-										$total_file_obj->recurse_copy($backup_of_folder);
+										$total_file_obj->count_files($backup_of_folder);
 										$total_file_obj->backup_id = $backup_id;
 										$total_file_obj->update_data();
 										
@@ -559,7 +556,6 @@ else
 						$where["meta_key"] = "backup_local_folder";
 						$update->update_backup_keys(backup_tbl_backup_meta(),$values,$where);
 						
-						$file_info = round(filesize($backup_path)/1000,2);
 						ob_end_flush();
 						die();
 					}

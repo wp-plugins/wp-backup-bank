@@ -133,8 +133,8 @@ else
 									</div>
 									<div class="layout-control-group">
 										<div>
-											<input type="button" id="ux_btn_action" onclick="proceed_to_back();" name="ux_btn_action" class="btn btn-danger" value="<< <?php _e("Back to Previous Step", wp_backup_bank); ?>"/>
-											<input type="submit" id="ux_btn_submit" name="ux_btn_submit" class="btn btn-danger" value="<?php _e( "Proceed to Next Step", wp_backup_bank ); ?> >>" style="float:right;"/>
+											<input type="button" id="ux_btn_action" onclick="proceed_to_back();" name="ux_btn_action" class="btn btn-backup-bank" value="<< <?php _e("Back to Previous Step", wp_backup_bank); ?>"/>
+											<input type="submit" id="ux_btn_submit" name="ux_btn_submit" class="btn btn-backup-bank" value="<?php _e( "Proceed to Next Step", wp_backup_bank ); ?> >>" style="float:right;"/>
 										</div>
 									</div>
 								</div>

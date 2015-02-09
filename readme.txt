@@ -3,7 +3,7 @@ Contributors: contact-banker, Gallery-Bank
 Tags: backup, wp backup, wordpress backup, admin, db backup
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -35,6 +35,12 @@ Please email all your queries/issues at support@tech-banker.com
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Few Bug Fixed related to Exclude Files.
+* Displayed Archive size in Log File.
+* Changes in Layout.
 
 = 1.0 =
 

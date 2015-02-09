@@ -49,7 +49,7 @@ else
 							</h4>
 						</div>
 						<div class="widget-layout-body">
-						<input type="button" id="ux_btn_action" onclick="save_plugin_settings();" name="ux_btn_action" class="btn btn-danger" value="<?php _e("Save Settings", wp_backup_bank); ?>" style = "float:right"/>
+						<input type="button" id="ux_btn_action" onclick="save_plugin_settings();" name="ux_btn_action" class="btn btn-backup-bank" value="<?php _e("Save Settings", wp_backup_bank); ?>" style = "float:right"/>
 							<div class="fluid-layout" >
 								<div class="layout-span12">
 								<div class="separator-doubled"></div>

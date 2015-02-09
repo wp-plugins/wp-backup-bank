@@ -76,8 +76,8 @@ else
 									<option value="1"><?php _e("Delete", wp_backup_bank); ?></option>
 								</select>
 								<input type="button" id="ux_btn_action" onclick="bulk_delete();" name="ux_btn_action" 
-									class="btn btn-danger" value="<?php _e("Apply", wp_backup_bank); ?>"/>
-								<a class="btn btn-danger" href="admin.php?page=generate_backup"
+									class="btn btn-backup-bank" value="<?php _e("Apply", wp_backup_bank); ?>"/>
+								<a class="btn btn-backup-bank" href="admin.php?page=generate_backup"
 								><?php _e("Generate New Backup", wp_backup_bank); ?></a>
 							</div>
 							<div class="separator-doubled"></div>
@@ -141,8 +141,7 @@ else
 	
 											$index = array_search("backup_status", $backup_meta_keys);
 											$backup_status = $backup_details[$index]->meta_value;
-											//$alternate = $flag % 2 == 0 ? "alternate" : "";
-											$alternate = ($alternate == "") ? "alternate" : "";
+											$alternate = (empty($alternate)) ? "alternate" : "";
 											?>
 											<tr class="<?php echo $alternate; ?>">
 												<td>
@@ -266,7 +265,7 @@ else
 				"oLanguage": {
 				"sLengthMenu": "<span>Show entries:</span> _MENU_"
 				},
-				"aaSorting": [[ 0, "asc" ]],
+				"aaSorting": [[ 1, "asc" ]],
 				"aoColumnDefs": [ { "bSortable": false, "aTargets": [0] } ],
 				"bFilter": false
 			});

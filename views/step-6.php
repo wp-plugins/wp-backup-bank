@@ -281,8 +281,8 @@ else
 										</div>
 									</div>
 									<div class="layout-control-group">
-										<input type="button" id="ux_btn_action" onclick="proceed_to_back();" name="ux_btn_action" class="btn btn-danger" value="< <?php _e("Back to Previous Step", wp_backup_bank); ?>" />
-										<input type="button" id="ux_btn_submit" name="ux_btn_submit" class="btn btn-danger" value="<?php _e("Confirm & Proceed to Generate Backup", wp_backup_bank ); ?>" style="float:right;" onclick="confirm_backup();" />
+										<input type="button" id="ux_btn_action" onclick="proceed_to_back();" name="ux_btn_action" class="btn btn-backup-bank" value="< <?php _e("Back to Previous Step", wp_backup_bank); ?>" />
+										<input type="button" id="ux_btn_submit" name="ux_btn_submit" class="btn btn-backup-bank" value="<?php _e("Confirm & Proceed to Generate Backup", wp_backup_bank ); ?>" style="float:right;" onclick="confirm_backup();" />
 									</div>
 								</div>
 							</div>

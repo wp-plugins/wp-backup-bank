@@ -35,11 +35,11 @@ else
 							</h4>
 						</div>
 						<div class="widget-layout-body">
-							<a class="btn btn-danger system-report" href="#"><?php _e("Get System Report", wp_backup_bank); ?></a>
+							<a class="btn btn-backup-bank system-report" href="#"><?php _e("Get System Report", wp_backup_bank); ?></a>
 							<div id="bkup-system-report" class="layout-system-report" style="display: none;">
 								<textarea class="layout-span12" readonly="readonly" rows="12"></textarea>
 							</div>
-							<a class="btn btn-danger close-report" href="#" style="display:none;"><?php _e("Close System Report", wp_backup_bank); ?></a>
+							<a class="btn btn-backup-bank close-report" href="#" style="display:none;"><?php _e("Close System Report", wp_backup_bank); ?></a>
 							<div class="separator-doubled"></div>
 							<div class="fluid-layout">
 								<div class="layout-span6 responsive">

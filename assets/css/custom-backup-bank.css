@@ -350,3 +350,18 @@ line-height: 24px;
 .tooltip.right .tooltip-arrow { top: 50%; left: 0; margin-top: -5px; border-width: 5px 5px 5px 0; border-right-color: #000000; }
 .tooltip.left .tooltip-arrow {  top: 50%; right: 0; margin-top: -5px; border-width: 5px 0 5px 5px; border-left-color: #000000; }
 .tooltip.bottom .tooltip-arrow { top: 0; left: 50%; margin-left: -5px; border-width: 0 5px 5px; border-bottom-color: #000000; }
+
+/**************************************Button Custom Class********************************/
+.btn-backup-bank 
+{
+	color: #ffffff !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !important;
+	background-color: #cd354b !important;
+	background:#cd354b !important;
+}
+
+.btn-backup-bank:hover
+{
+	color: #ffffff !important;
+	background-color:rgba(218, 38, 71, 0.91) !important;
+}

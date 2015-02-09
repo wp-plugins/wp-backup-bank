@@ -80,8 +80,8 @@ else
 								</div>
 							</div>
 							<div>
-								<input type="button" id="ux_btn_action_back" name="ux_btn_action_back" onclick="proceed_to_back();" class="btn btn-danger" value="<< <?php _e("Back to Previous Step", wp_backup_bank); ?>" />
-								<input type="button" id="ux_btn_action" name="ux_btn_action" onclick="proceed_to_next();" class="btn btn-danger" value="<?php _e("Proceed to Next Step", wp_backup_bank); ?> >>" style="float:right;" />
+								<input type="button" id="ux_btn_action_back" name="ux_btn_action_back" onclick="proceed_to_back();" class="btn btn-backup-bank" value="<< <?php _e("Back to Previous Step", wp_backup_bank); ?>" />
+								<input type="button" id="ux_btn_action" name="ux_btn_action" onclick="proceed_to_next();" class="btn btn-backup-bank" value="<?php _e("Proceed to Next Step", wp_backup_bank); ?> >>" style="float:right;" />
 							</div>
 						</div>
 					</div>

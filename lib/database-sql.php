@@ -23,7 +23,7 @@ else
 	}
 	else
 	{
-		if((isset($complete_backup)))
+		if (!is_dir(BACKUP_BK_CONTENT_DIR."/wp-backup-bank/".date("d-m-Y")."/database"))
 		{
 			wp_mkdir_p(BACKUP_BK_CONTENT_DIR."/wp-backup-bank/".date("d-m-Y")."/database");
 		}

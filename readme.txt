@@ -2,8 +2,8 @@
 Contributors: contact-banker, Gallery-Bank
 Tags: backup, wp backup, wordpress backup, admin, db backup
 Requires at least: 3.0
-Tested up to: 4.1
-Stable tag: 1.0.2
+Tested up to: 4.1.1
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -35,6 +35,12 @@ Please email all your queries/issues at support@tech-banker.com
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 1.0.3 =
+
+* Minor Bugs Fixed.
+* Other Services Section Updated.
+* Premium Editions Section Updated.
 
 = 1.0.2 =
 

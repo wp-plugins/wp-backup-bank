@@ -493,7 +493,7 @@ else
 											class="css3_grid_vertical_align"><span class="css3_grid_tooltip"><span>You
 														just need to pay for once for life time.</span>
 												<h1 class="col1">
-														&euro;<span>18</span>
+														&pound;<span>14</span>
 													</h1>
 													<h3 class="col1">one time</h3></span></span></span></li>
 									<li
@@ -723,7 +723,7 @@ else
 											class="css3_grid_vertical_align"><span class="css3_grid_tooltip"><span>You
 														just need to pay for once for life time.</span>
 												<h1 class="col1">
-														&euro;<span>28</span>
+														&pound;<span>22</span>
 													</h1>
 													<h3 class="col1">one time</h3></span></span></span></li>
 									<li
@@ -952,7 +952,7 @@ else
 											class="css3_grid_vertical_align"><span class="css3_grid_tooltip"><span>You
 														just need to pay for once for life time.</span>
 												<h1 class="col1">
-														&euro;<span>88</span>
+														&pound;<span>66</span>
 													</h1>
 													<h3 class="col1">one time</h3></span></span></span></li>
 									<li
@@ -1181,7 +1181,7 @@ else
 											class="css3_grid_vertical_align"><span class="css3_grid_tooltip"><span>You
 														just need to pay for once for life time.</span>
 												<h1 class="col1">
-														&euro;<span>769</span>
+														&pound;<span>577</span>
 													</h1>
 													<h3 class="col1">one time</h3></span></span></span></li>
 									<li

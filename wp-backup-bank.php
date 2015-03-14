@@ -4,7 +4,7 @@ Plugin Name: WP Backup Bank
 Plugin URI: http://tech-banker.com
 Description: Easy Backup Plugin for WordPress to create, download and restore backups of your WordPress website.
 Author: Tech Banker
-Version: 1.0.3
+Version: 1.0.4
 Author URI: http://tech-banker.com
 */
 /////////////////////////////////////  Define WP Backup Bank Constants  ////////////////////////////////////////
@@ -132,6 +132,10 @@ if(!function_exists("create_admin_menus_for_backup_bank"))
 	function create_admin_menus_for_backup_bank($meta = true)
 	{
 		global $wp_admin_bar, $wpdb, $current_user;
+		if (!is_user_logged_in())
+		{
+			return;
+		}
 		if(is_super_admin())
 		{
 			$bb_role = "administrator";

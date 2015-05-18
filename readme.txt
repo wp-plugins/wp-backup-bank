@@ -1,13 +1,13 @@
-=== WP Backup Bank ===
+=== WP Backup Bank - For WordPress & DB Backups ===
 Contributors: contact-banker, Gallery-Bank
 Tags: backup, wp backup, wordpress backup, admin, db backup
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Easy Backup Plugin for WordPress to create, download and restore backups of your WordPress website.
+Backup Bank is an easy Backup Plugin for WordPress to create, download and restore backups of your WordPress website.
 
 == Description ==
 
@@ -35,6 +35,10 @@ Please email all your queries/issues at support@tech-banker.com
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 1.0.10 =
+
+* Minor Bugs Fixed.
 
 = 1.0.9 =
 
